@@ -1,0 +1,64 @@
+name: Feature request
+description: Plan and track a new feature
+title: "[Feature] "
+labels: ["feature", "p2"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Link a PRD if available and keep acceptance criteria testable.
+  - type: input
+    id: prd
+    attributes:
+      label: PRD link
+      description: Link to `docs/prds/...` or an external PRD.
+      placeholder: https://github.com/owner/repo/blob/main/docs/prds/...
+    validations:
+      required: false
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem statement
+      description: What user problem are we solving?
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope
+      description: Include in-scope and out-of-scope notes.
+      placeholder: |
+        In scope:
+        - ...
+        Out of scope:
+        - ...
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      description: Checklist format preferred.
+      placeholder: |
+        - [ ] ...
+        - [ ] ...
+    validations:
+      required: true
+  - type: textarea
+    id: test-plan
+    attributes:
+      label: Test plan
+      placeholder: |
+        Automated:
+        - ...
+        Manual:
+        - ...
+    validations:
+      required: true
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: Dependencies and risks
+      placeholder: |
+        Depends on:
+        Risks:
