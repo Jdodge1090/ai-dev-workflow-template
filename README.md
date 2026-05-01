@@ -2,6 +2,15 @@
 
 Use this repository as a starting point for new projects.
 
+## Included Workflow Skills
+
+- `feature-planning`
+- `prd-to-issues`
+- `issue-implementation`
+- `code-review`
+- `github-kanban`
+- `github-board-maintenance`
+
 ## Create New Project From This Template
 
 ### One-time setup (on this repo)

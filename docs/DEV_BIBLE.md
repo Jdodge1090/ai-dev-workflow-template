@@ -83,3 +83,112 @@ Every PR should include:
 - Tests pass and QA evidence is attached.
 - Docs and status are updated.
 - PR merged and issue moved to Done.
+
+# GitHub Board Maintenance
+
+## Purpose
+
+The GitHub Project board is the operating system for the project.
+
+It must reflect reality, not just what the status field says.
+
+AI must review the full board, comments, timelines, pull requests, and linked issues before deciding what comes next.
+
+## Board Review Rule
+
+Always review the entire board:
+
+- Backlog
+- Ready
+- In Progress
+- Review
+- QA
+- Blocked
+- Done
+
+Do not only review Ready and In Progress.
+
+## Board Truth Rule
+
+The true state of an issue is determined by:
+
+1. Issue description
+2. Acceptance criteria
+3. Labels
+4. Comments
+5. Timeline/history
+6. Linked issues
+7. Linked pull requests
+8. Board status
+
+Status alone is never enough.
+
+## Maintenance Actions
+
+The board maintenance skill can recommend or apply:
+
+- Move items to Blocked
+- Move items to Done
+- Move items to Ready
+- Move items to Review or QA
+- Promote backlog items
+- Close duplicates
+- Create follow-up issues
+- Link parent/child issues
+- Add blocker/follow-up labels
+- Identify stale work
+
+## Standard Prompt
+
+Use this prompt in Cursor:
+
+Use the github-board-maintenance skill.
+
+Review the entire GitHub Project board.
+
+Check:
+- Backlog
+- Ready
+- In Progress
+- Review
+- QA
+- Blocked
+- Done
+
+Read comments, timeline/history, linked PRs, and linked issues.
+
+Update the board if needed.
+
+Then tell me the single true next priority item.
+
+## Quick Priority Prompt
+
+Use this when you only want the next item:
+
+Use the github-board-maintenance skill.
+
+Review the entire board, not just Ready and In Progress.
+Check comments, history, linked PRs, and linked issues.
+
+Return the single highest-priority actionable issue.
+
+## Sub-Issue Rule
+
+If implementation reveals new required work:
+
+- Create a follow-up issue
+- Link it to the parent
+- Decide whether the parent is blocked
+- Update board status accordingly
+
+## Board Hygiene Checklist
+
+Before starting work:
+
+- Are blocked items actually marked Blocked?
+- Are completed items marked Done?
+- Are Review/QA items stale?
+- Are follow-up issues linked?
+- Are duplicates closed or merged?
+- Are Ready items truly ready?
+- Are backlog items still valid?
